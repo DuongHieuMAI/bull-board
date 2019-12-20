@@ -35,7 +35,9 @@ module.exports = {
     }
 
     bullQueues.forEach((item) => {
-      queues[item.name] = item;
+      if (item) {
+        queues[item.name] = item;
+      }
     })
 
     return queues
